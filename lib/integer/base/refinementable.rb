@@ -33,12 +33,8 @@ class Integer; module Base
   refine String do
     prepend Integer::Base::StringPrepender
   end
-  
-  refine Fixnum do
-    prepend Integer::Base::IntegerPrepender
-  end
 
-  refine Bignum do
+  refine Integer do
     prepend Integer::Base::IntegerPrepender
   end
 
